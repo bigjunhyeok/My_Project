@@ -57,7 +57,7 @@ def calculate():
             result = num1 % num2
 
         # 결과 출력
-        print(f"결과: {num1} {operator} {num2} = {result}")
+        print(f"수행 결과: {num1} {operator} {num2} = {result}")
 
 # 실행
 if __name__ == "__main__":
