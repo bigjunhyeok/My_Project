@@ -24,7 +24,7 @@ My_Project/
 │── Day001_Calculator/       # 1일차: 기본 계산기
 │   ├── calculator.py
 │
-│── Day002_Translator/       # 2일차: 번역기 (파파고 API)
+│── Day002_Translator/       # 2일차: 번역기
 │   ├── translator.py
 │
 │── Day003_TodoList/         # 3일차: CLI 기반 To-Do 리스트
