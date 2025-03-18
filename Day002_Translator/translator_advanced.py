@@ -17,7 +17,7 @@ def translate_text(text, dest_lang="ko", show_option=False):
     except Exception as e:
         return f"번역 오류 : {e}"    # 오류 발생 시 기본값 반환
 
-"""한글 번역기"""
+"""한글 고급 번역기"""
 def translator():
     print("--------------------")
     print("한글 번역기 (종료: 'q', 기록 : 'history', 초기화 : 'clear', 옵션변경 : 'option', 상세정보 : 'detail' )")
