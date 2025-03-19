@@ -4,7 +4,6 @@ from datetime import datetime
 
 TODOLIST_FILE = "my_to_do_list.json"
 
-
 """ todolist 불러오기 """
 def load_file():
     if os.path.exists(TODOLIST_FILE):
