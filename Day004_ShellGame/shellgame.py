@@ -17,16 +17,35 @@ def play_shell_game():
     print("🎩🎩🎩🎩🎩🎩🎩🎩🎩🎩🎩🎩🎩🎩🎩")
     time.sleep(1)
 
+    # 게임 설명
+    shell_game_intro = [
+        "\n############################################################",
+        "플레이어는 여러 개의 컵 중 공을 숨긴 컵의 위치를 맞혀야 합니다.",
+        "",
+        "✅ 게임 규칙 :",
+        "1. 컵은 3개이며, 각각 왼쪽부터 번호(1번부터 3번)가 매겨져 있습니다.",
+        "2. 공은 무작위로 하나의 컵에 숨겨집니다.",
+        "3. 플레이어는 컵의 번호를 입력하여 공의 위치를 추측합니다.",
+        "",
+        "자 이제 게임을 시작합니다!",
+        "############################################################"
+    ]
+    for line in shell_game_intro:
+        print(line)
+        time.sleep(0.3)
+
     while True:
+        print("\n------------------------")
         cups = shuffle_cups()  # 컵 섞기
-        print("\n🎲 컵을 섞는 중...\n")
+        print("🎲 컵을 섞는 중...\n")
         time.sleep(2)
 
         print("🥤 🥤 🥤")  # 컵 3개 출력
 
+        # 게임 수행
         while True:
             try:
-                choice = int(input("🔍 동전이 들어있는 컵 선택 (1, 2, 3) : "))
+                choice = int(input("\n🔍 동전이 들어있는 컵 선택 (1, 2, 3) : "))
                 if 1 <= choice <= 3:
                     break
                 else:
@@ -50,15 +69,15 @@ def play_shell_game():
             if retry in ["y"]:
                 break
             elif retry in ["n"]:
-                print("\n----------")
+                print("\n---------------")
                 print(f"🔢 총 게임 수: {win_count + lose_count}")
-                print("----------")
+                print("---------------")
                 print(f"🏆 승리 횟수 : {win_count}")
                 print(f"💀 패배 횟수 : {lose_count}")
                 win_rate = int((win_count / (win_count + lose_count)) * 100)
-                print("----------")
+                print("---------------")
                 print(f"📊 당신의 승률 : {win_rate}%")
-                print("----------")
+                print("---------------")
                 print("\n👋 게임을 종료합니다. 감사합니다!")
                 return
             else:
