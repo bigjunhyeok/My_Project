@@ -20,7 +20,7 @@ def save_file(tasks):
 def list_tasks():
     tasks = load_file()
     if not tasks["tasks_list"]:
-        print("작업 목록이 없음.")
+        print("작업 목록이 없습니다.")
     else:
         for i, task in enumerate(tasks["tasks_list"]):
             print(f"{i}. {task}")
@@ -29,7 +29,7 @@ def list_tasks():
 def completed_list_tasks():
     tasks = load_file()
     if not tasks["completed_tasks_list"]:
-        print("완료된 작업 목록이 없음.")
+        print("완료된 작업 목록이 없습니다.")
     else:
         for i, task in enumerate(tasks["completed_tasks_list"]):
             print(f"{i}. {task}")
@@ -40,48 +40,48 @@ def add_task(task):
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     tasks["tasks_list"].append({"task": task, "timestamp": timestamp})
     save_file(tasks)
-    print(f"[+] 추가완료. : {task}")
+    print(f"[+] 추가되었습니다. : {task}")
 
 """ task 제거 """
 def remove_task(index):
     tasks = load_file()
     if not tasks["tasks_list"]:
-        print("삭제할 목록이 없음.")
+        print("삭제할 목록이 없습니다.")
     else:
         try:
             removed = tasks["tasks_list"].pop(index)
             save_file(tasks)
-            print(f"[-] 제거완료. : {removed}")
+            print(f"[-] 제거 완료되었습니다. : {removed}")
         except IndexError:
-            print("유효하지 않은 번호.")
+            print("유효하지 않은 번호입니다.")
 
 """ task 완료 처리 """
 def complete_task(index):
     tasks = load_file()
     if not tasks["tasks_list"]:
-        print("완료할 목록이 없음.")
+        print("완료할 목록이 없습니다.")
     else:
         try:
             completed = tasks["tasks_list"].pop(index)
             tasks["completed_tasks_list"].append(completed)
             save_file(tasks)
-            print(f"[✔] 완료됨. : {completed}")
+            print(f"[✔] 완료되었습니다. : {completed}")
         except IndexError:
-            print("유효하지 않은 번호.")
+            print("유효하지 않은 번호입니다.")
 
 """ 모든 task 완료 처리 """
 def complete_all_task():
     tasks = load_file()
     if not tasks["tasks_list"]:
-        print("완료할 목록이 없음.")
+        print("완료할 목록이 없습니다.")
     else:
         try:
             tasks["completed_tasks_list"].extend(tasks["tasks_list"])   # 전체 이동
             tasks["tasks_list"].clear() # 기존 목록 초기화
             save_file(tasks)
-            print(f"[✔] 완료됨.")
+            print(f"[✔] 완료되었습니다.")
         except IndexError:
-            print("유효하지 않은 번호.")
+            print("유효하지 않은 번호입니다.")
 
 """ task 목록 초기화 """
 def clear_task_list():
@@ -90,9 +90,9 @@ def clear_task_list():
         tasks = load_file()
         tasks["tasks_list"] = []
         save_file(tasks)
-        print("모든 [task 목록] 초기화 완료.")
+        print("모든 [task 목록] 초기화되었습니다.")
     else:
-        print("초기화 취소.")
+        print("초기화 취소되었습니다.")
 
 """ completed task 목록 초기화 """
 def clear_completed_task_list():
@@ -101,9 +101,9 @@ def clear_completed_task_list():
         tasks = load_file()
         tasks["completed_tasks_list"] = []
         save_file(tasks)
-        print("모든 [completed_task 목록] 초기화 완료.")
+        print("모든 [completed_task] 목록이 초기화되었습니다.")
     else:
-        print("초기화 취소.")
+        print("초기화 취소되었습니다.")
 
 """ 도움말 출력 """
 def show_help():
@@ -129,13 +129,13 @@ def main():
         elif command == "completed_list":
             completed_list_tasks()
         elif command == "add":
-            task = input("추가할 task : ")
+            task = input("추가할 task를 입력하세요 : ")
             add_task(task)
         elif command == "remove":
-            index = int(input("삭제할 tasks 번호 : "))
+            index = int(input("삭제할 tasks 번호를 입력하세요 : "))
             remove_task(index)
         elif command == "complete":
-            index = int(input("완료할 tasks 번호 : "))
+            index = int(input("완료할 tasks 번호를 입력하세요 : "))
             complete_task(index)
         elif command == "complete_all":
             complete_all_task()
@@ -149,7 +149,7 @@ def main():
             print("프로그램 종료.")
             break
         else:
-            print("유효하지 않은 명령.")
+            print("유효하지 않은 명령입니다.")
 
 if __name__ == "__main__":
     main()

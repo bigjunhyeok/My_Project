@@ -14,7 +14,7 @@ def check_number(input_number):
             check_exit(value)  # 종료 요청 확인
             return float(value)  # 숫자로 변환 후 반환
         except ValueError:
-            print("올바르지 않은 숫자.")
+            print("올바르지 않은 숫자입니다.")
 
 """연산자 유효성 검사"""
 def check_oper():
@@ -22,20 +22,20 @@ def check_oper():
     valuid_operators = ('+', '-', '*', '/', '%')
 
     while True:
-        operator = input("연산자 입력 (+, -, *, /, %) : ")
+        operator = input("연산자를 입력하세요 (+, -, *, /, %) : ")
         check_exit(operator)  # 종료 요청 확인
         if operator in valuid_operators:
             return operator  # 유효한 연산자라면 반환
-        print("올바르지 않은 연산자.")
+        print("올바르지 않은 연산자입니다.")
 
 """계산기"""
 def calculate():
     # 기본 사칙연산 계산기 수행
-    print("기본 계산기 (종료: 'q')")
+    print("기본 계산기 (종료: 'q')\n")
     while True:
-        num1 = check_number("첫 번째 숫자 입력: ")
+        num1 = check_number("첫 번째 숫자를 입력하세요: ")
         operator = check_oper() # 연산자 유효성 검사
-        num2 = check_number("두 번째 숫자 입력: ")
+        num2 = check_number("두 번째 숫자를 입력하세요: ")
 
         # 연산 수행
         if operator == '+':
@@ -46,17 +46,17 @@ def calculate():
             result = num1 * num2
         elif operator == '/':
             if num2 == 0:
-                print("0으로 나눌 수 없음.")
+                print("0으로 나눌 수 없습니다.")
                 continue
             result = num1 / num2
         elif operator == '%':
             if num2 == 0:
-                print("0으로 나눌 수 없음.")
+                print("0으로 나눌 수 없습니다.")
                 continue
             result = num1 % num2
 
         # 결과 출력
-        print(f"결과: {num1} {operator} {num2} = {result}")
+        print(f"결과: {num1} {operator} {num2} = {result}\n")
 
 if __name__ == "__main__":
     calculate()

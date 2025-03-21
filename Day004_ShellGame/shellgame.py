@@ -37,7 +37,7 @@ def play_shell_game():
     while True:
         print("\n------------------------")
         cups = shuffle_cups()  # 컵 섞기
-        print("🎲 컵을 섞는 중...\n")
+        print("🎲 컵을 섞는 중입니다...\n")
         time.sleep(2)
 
         print("🥤 🥤 🥤")  # 컵 3개 출력
@@ -45,22 +45,22 @@ def play_shell_game():
         # 게임 수행
         while True:
             try:
-                choice = int(input("\n🔍 동전이 들어있는 컵 선택 (1, 2, 3) : "))
+                choice = int(input("\n🔍 동전이 들어있는 컵을 선택하세요 (1, 2, 3) : "))
                 if 1 <= choice <= 3:
                     break
                 else:
-                    print("\n 유효하지 않은 값. 다시 입력.")
+                    print("\n⚠️유효하지 않은 값입니다. 다시 입력하세요.")
             except ValueError:
-                print("\n 유효하지 않은 값. 다시 입력.")
+                print("\n⚠️유효하지 않은 값입니다. 다시 입력하세요.")
 
         index = choice - 1  # cups 리스트 인덱스 맞추기
         selected_cup = cups[index]  # 플레이어가 선택한 컵
 
         if selected_cup == "💰":
-            print(f"\n🔥 정답! 당신의 승리.\n 정답 : {cups}")
+            print(f"\n🔥 정답! 당신의 승리입니다.\n 정답 : {cups}")
             win_count += 1 # 승리 횟수 카운트
         else:
-            print(f"\n💥 꽝! 당신의 패배.\n 정답 : {cups}")
+            print(f"\n💥 꽝! 당신의 패배입니다.\n 정답 : {cups}")
             lose_count += 1 # 패배 횟수 카운트
 
         # 게임 재시도 선택
@@ -69,6 +69,7 @@ def play_shell_game():
             if retry in ["y"]:
                 break
             elif retry in ["n"]:
+                print("\n👋 게임을 종료합니다.")
                 print("\n---------------")
                 print(f"🔢 총 게임 수: {win_count + lose_count}")
                 print("---------------")
@@ -76,12 +77,11 @@ def play_shell_game():
                 print(f"💀 패배 횟수 : {lose_count}")
                 win_rate = int((win_count / (win_count + lose_count)) * 100)
                 print("---------------")
-                print(f"📊 당신의 승률 : {win_rate}%")
+                print(f"📊 승률 : {win_rate}%")
                 print("---------------")
-                print("\n👋 게임을 종료합니다. 감사합니다!")
                 return
             else:
-                print("\n잘못된 입력.")
+                print("\n잘못된 입력입니다.")
 
 if __name__ == "__main__":
     play_shell_game()
