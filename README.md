@@ -41,72 +41,27 @@ My_Project/
 │
 │── Day007_MazeGenerator/    # 7일차: 미로 생성 및 탈출 (랜덤 알고리즘)
 │   ├── maze_game.py
+|
+│── Day008_UnitConverter/    # 8일차: 단위 변환기 (cm↔inch, kg↔lb 등)
+│   ├── unit_converter.py
 │
-│── Day008_CurrencyConverter/ # 8일차: 환율 변환기 (API 사용 ❌, 환율 파일 제공)
-│   ├── currency_converter.py
+│── Day009_LunchPicker/      # 9일차: 점심 메뉴 추천기 (리스트에서 랜덤 선택)
+│   ├── lunch_picker.py
 │
-│── Day009_TextToSpeech/     # 9일차: 텍스트 음성 변환기 (TTS 라이브러리만 활용)
-│   ├── text_to_speech.py
+│── Day010_ComplimentGenerator/    # 10일차: 랜덤 칭찬 생성기
+│   ├── compliment_generator.py
 │
-│── Day010_QRCodeGenerator/  # 10일차: QR 코드 생성기
-│   ├── qr_generator.py
+│── Day011_LottoNumberPicker/      # 11일차: 로또 번호 생성기 (1~45 중 6개 랜덤 추출)
+│   ├── lotto_picker.py
 │
-│── Day011_PasswordManager/  # 11일차: 비밀번호 관리자 (파일 암호화 저장)
-│   ├── password_manager.py
+│── Day012_MBTIQuiz/               # 12일차: 간이 MBTI 추천 퀴즈
+│   ├── mbti_quiz.py
 │
-│── Day012_PomodoroTimer/    # 12일차: 뽀모도로 타이머 (시간 관리)
-│   ├── pomodoro.py
+│── Day013_WeatherSimulator/       # 13일차: 랜덤 날씨 시뮬레이터 (API ❌)
+│   ├── weather_simulator.py
 │
-│── Day013_TicTacToe/        # 13일차: 틱택토 게임 (AI vs 플레이어 가능)
-│   ├── tic_tac_toe.py
+│── Day014_CountdownTimer/         # 14일차: 타이머 기능 (초 입력 후 카운트다운)
+│   ├── countdown_timer.py
 │
-│── Day014_Calculator/       # 14일차: GUI 계산기 (Tkinter 사용)
-│   ├── calculator.py
-│
-│── Day015_2048Game/         # 15일차: 2048 게임 (숫자 합치기)
-│   ├── game_2048.py
-│
-│── Day016_SortingVisualizer/ # 16일차: 정렬 알고리즘 시각화
-│   ├── sorting_visualizer.py
-│
-│── Day017_ChessGame/        # 17일차: 체스 게임 (텍스트 기반)
-│   ├── chess.py
-│
-│── Day018_SudokuSolver/     # 18일차: 스도쿠 풀이 프로그램
-│   ├── sudoku_solver.py
-│
-│── Day019_MusicPlayer/      # 19일차: 로컬 MP3 음악 플레이어 (pygame 활용)
-│   ├── music_player.py
-│
-│── Day020_PixelArtCreator/  # 20일차: 픽셀 아트 에디터 (Tkinter)
-│   ├── pixel_art.py
-│
-│── Day021_ConwayGameOfLife/ # 21일차: 생명의 게임 (자동 시뮬레이션)
-│   ├── game_of_life.py
-│
-│── Day022_GuessTheNumber/   # 22일차: 숫자 맞추기 게임 (AI 힌트 제공)
-│   ├── guess_number.py
-│
-│── Day023_AsciiArtGenerator/# 23일차: 이미지 → ASCII 아트 변환기
-│   ├── ascii_art.py
-│
-│── Day024_DungeonCrawler/   # 24일차: 텍스트 기반 던전 크롤러 게임
-│   ├── dungeon_crawler.py
-│
-│── Day025_HandwritingRecognizer/ # 25일차: 손글씨 인식기 (ML 모델 활용 ❌, 기본 필터)
-│   ├── handwriting.py
-│
-│── Day026_EncryptionTool/   # 26일차: 파일 암호화 & 복호화 툴
-│   ├── encryption_tool.py
-│
-│── Day027_PythonCompiler/   # 27일차: 파이썬 코드 실행기 (exec 활용)
-│   ├── python_compiler.py
-│
-│── Day028_PersonalJournal/  # 28일차: 개인 다이어리 (암호화 파일 저장)
-│   ├── journal.py
-│
-│── Day029_FitnessTracker/   # 29일차: 운동 기록 & 목표 관리 프로그램
-│   ├── fitness_tracker.py
-│
-│── Day030_StoryGenerator/   # 30일차: 랜덤 이야기 생성기 (마크로스키 체인)
-│   ├── story_generator.py
+│── Day015_MusicMoodPicker/        # 15일차: 무드 기반 랜덤 음악 추천기 (재생 ❌)
+│   ├── music_picker.py
