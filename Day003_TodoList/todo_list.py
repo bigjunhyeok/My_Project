@@ -2,7 +2,7 @@ import json
 import os
 from datetime import datetime
 
-TODOLIST_FILE = "my_to_do_list.json"
+TODOLIST_FILE = "my_todo_list.json"
 
 """ todolist 불러오기 """
 def load_file():

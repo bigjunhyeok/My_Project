@@ -44,10 +44,23 @@ def main():
         # 메뉴 출력
         show_menu()
         choice = input("번호를 선택하세요 : ").strip()
+
         # 프로그램 종료
         if choice == '0':
             print("👋 프로그램을 종료합니다.")
             break
+
+        # 숫자 확인 및 유효성 검사
+        if not choice.isdigit():
+            print("❗ 숫자를 입력해주세요.")
+            continue
+
+        # 1~7만 허용
+        choice_num = int(choice)
+        valid_range = list(range(1, len(keys) + 1)) + [7]
+        if choice_num not in valid_range:
+            print(f"❗ 0부터 7번까지만 선택 가능합니다.")
+            continue
 
         # 값 입력
         try:
