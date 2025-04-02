@@ -24,6 +24,16 @@ def stopwatch():
         print(f"\r⏱️  {format_time(elapsed_time)}", end="", flush=True)
         time.sleep(0.1)
 
+"""인트로 출력 함수"""
+def intro():
+    print("\n🕒🕒🕒🕒🕒🕒🕒🕒🕒🕒🕒🕒🕒")
+    print("🕒🕒🕒🕒 Stopwatch 🕒🕒🕒🕒")
+    print("🕒🕒🕒🕒🕒🕒🕒🕒🕒🕒🕒🕒🕒\n")
+
+    print(" ▶ S 키 : 시작/일시정지")
+    print(" ▶ R 키 : 리셋")
+    print(" ▶ Q 키 : 종료\n")
+
 """사용자 키 입력을 처리하는 함수"""
 def handle_keys():
     global running, start_time, elapsed_time, lap_times
@@ -62,14 +72,9 @@ def handle_keys():
                 print("-" * 30)
             break
 
+"""stopwatch"""
 def main():
-    print("\n🕒🕒🕒🕒🕒🕒🕒🕒🕒🕒🕒🕒🕒")
-    print("🕒🕒🕒🕒 Stopwatch 🕒🕒🕒🕒")
-    print("🕒🕒🕒🕒🕒🕒🕒🕒🕒🕒🕒🕒🕒\n")
-
-    print(" ▶ S 키 : 시작/일시정지")
-    print(" ▶ R 키 : 리셋")
-    print(" ▶ Q 키 : 종료\n")
+    intro()
 
     threading.Thread(target=stopwatch, daemon=True).start()
     handle_keys()

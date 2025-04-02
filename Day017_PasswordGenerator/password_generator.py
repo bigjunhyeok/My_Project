@@ -31,7 +31,7 @@ def loading_animation(seconds=1.0):
         print(".", end="", flush=True)
     print("\n")
 
-"""PasswordGenerator"""
+"""password_generator"""
 def main():
     intro()
     while True:
@@ -46,9 +46,32 @@ def main():
             except ValueError:
                 print("❌ 숫자를 입력하세요.\n")
 
-        use_upper = input("대문자를 포함할까요? (y/n) : ").lower() == 'y'
-        use_digits = input("숫자를 포함할까요? (y/n) : ").lower() == 'y'
-        use_specials = input("특수문자를 포함할까요? (y/n) : ").lower() == 'y'
+        # 대문자 포함 여부
+        while True:
+            upper_input = input("대문자를 포함할까요? (y/n) : ").lower()
+            if upper_input in ('y', 'n'):
+                use_upper = upper_input == 'y'
+                break
+            else:
+                print("❌ y 또는 n만 입력해주세요.")
+
+        # 숫자 포함 여부
+        while True:
+            digit_input = input("숫자를 포함할까요? (y/n) : ").lower()
+            if digit_input in ('y', 'n'):
+                use_digits = digit_input == 'y'
+                break
+            else:
+                print("❌ y 또는 n만 입력해주세요.")
+
+        # 특수문자 포함 여부
+        while True:
+            special_input = input("특수문자를 포함할까요? (y/n) : ").lower()
+            if special_input in ('y', 'n'):
+                use_specials = special_input == 'y'
+                break
+            else:
+                print("❌ y 또는 n만 입력해주세요.")
 
         # 비밀번호 생성 애니메이션
         loading_animation()
@@ -56,8 +79,15 @@ def main():
         password = generate_password(length, use_upper, use_digits, use_specials)
         print(f"🔐 생성된 비밀번호 : \033[92m{password}\033[0m")  # 초록색 강조
 
-        again = input("\n🔁 다시 생성할까요? (y/n) : ").lower()
-        if again != 'y':
+        # 재생성 여부
+        while True:
+            again = input("\n🔁 다시 생성할까요? (y/n) : ").lower()
+            if again in ('y', 'n'):
+                break
+            else:
+                print("❌ y 또는 n만 입력해주세요.")
+
+        if again == 'n':
             print("\n👋 프로그램을 종료합니다.")
             break
 
