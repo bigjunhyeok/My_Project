@@ -1,4 +1,4 @@
-import os
+itimport os
 
 """인트로 출력"""
 def show_intro():
