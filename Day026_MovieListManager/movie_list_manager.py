@@ -184,7 +184,7 @@ def load_movies():
             print(f"❗ 파일 로딩 실패 : {e}")
     return []
 
-"""메인 루프"""
+"""MovieListManager"""
 def main():
     movie_list = load_movies()
 
