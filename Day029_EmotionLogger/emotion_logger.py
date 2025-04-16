@@ -116,7 +116,7 @@ def delete_emotion():
     except ValueError:
         print("숫자를 정확히 입력하세요.")
 
-"""메인 함수"""
+"""EmotionLogger"""
 def main():
     show_intro()
     while True:
